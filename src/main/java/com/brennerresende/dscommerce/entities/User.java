@@ -22,6 +22,7 @@ public class User {
 	private Long id;
 	@Column(unique = true)
 	private String email;
+	private String name;
 	private String phone;
 	private LocalDate birthDate;
 	private String password;
@@ -33,9 +34,10 @@ public class User {
 	}
 
 
-	public User(Long id, String email, String phone, LocalDate birthDate, String password) {
+	public User(Long id, String email, String name, String phone, LocalDate birthDate, String password) {
 		this.id = id;
 		this.email = email;
+		this.setName(name);
 		this.phone = phone;
 		this.birthDate = birthDate;
 		this.password = password;
@@ -59,6 +61,16 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 
