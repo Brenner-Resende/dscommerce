@@ -10,6 +10,10 @@ public class ProductDTO {
 	private Double price;
 	private String imgUrl;
 	
+	public ProductDTO() {
+
+	}
+	
 	public ProductDTO(Long id, String name, String description, Double price, String imgUrl) {
 		this.id = id;
 		this.name = name;
@@ -46,4 +50,25 @@ public class ProductDTO {
 	public String getImgUrl() {
 		return imgUrl;
 	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+
 }
